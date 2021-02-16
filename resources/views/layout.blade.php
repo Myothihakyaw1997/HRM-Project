@@ -11,7 +11,7 @@
 </head>
 <body>
     <div class="main">
-        <aside class="shadow bg-white rounded d-flex flex-column" >
+        <aside class="shadow-sm bg-white rounded d-flex flex-column" >
             <div class="mb-5 mt-3 dash-header">Dashboard</div>
             <a href="/home" style="color: black; text-decoration: none;" class="w-100 mb-4 dash-link">
                 <div>
