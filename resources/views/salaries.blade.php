@@ -14,6 +14,8 @@
             <th scope="col">unpaid_leave</th>
             <th scope="col">Position</th>
             <th scope="col">Bonus</th>
+            <th scope="col">Date</th>
+
           </tr>
         </thead>
         <tbody>
@@ -27,6 +29,7 @@
                 <td>{{ $salary->unpaid_leave }}</td>
                 <td>{{ $salary->position }}</td>
                 <td>{{ $salary->bonus }}</td>
+                <td>{{ $salary->created_at }}</td>
             </tr>
           @endforeach
         </tbody>
