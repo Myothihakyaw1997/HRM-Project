@@ -114,3 +114,8 @@ opacity: 0;
     width: 190px;
 }
 
+.edit-back-btn {
+    position: relative;
+    bottom: 39px;
+    left: 100px;
+}

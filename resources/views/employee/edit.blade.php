@@ -1,6 +1,7 @@
 @extends('layout')
 
 @section('edit-employee')
+
 <form method="POST" action="/employee/{{ $employee->id }}/update">
     @csrf
     @method('put')
@@ -49,5 +50,11 @@
     </div>
     <button type="submit" class="btn btn-primary">Submit</button>
   </form>
+
+  <div class="edit-back-btn">
+    <a href="/employees">
+      <button type="button" class="btn btn-dark">Back</button>
+    </a>
+  </div>
 
 @endsection

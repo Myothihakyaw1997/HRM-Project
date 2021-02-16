@@ -18,6 +18,18 @@ class EmployeeController extends Controller
         return view('employee.show',['employee' => $employee]);
     }
 
+    public function search() {
+        $name = strtolower(str_replace(' ','',request('emp-name')));
+
+        $employee = Employee::whereRaw("LOWER(Replace(`name` , ' ', ''))= ?", [$name] )->first();
+        if ($employee != null) {
+
+            return view('employee.show',['employee' =>$employee]);
+        }
+        else {
+            abort(404, "Request Employee Not Found !!!");
+        }
+    }
     public function create(){
 
         return view('employee.create');

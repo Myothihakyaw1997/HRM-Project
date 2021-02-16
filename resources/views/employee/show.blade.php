@@ -43,4 +43,9 @@
             <td class="table-light">{{ $employee->salary->salary }}</td>
         </tr>
     </table>
+    <div>
+        <a href="/employees"><button type="button" class="btn btn-dark">Back</button></a>
+        <a href="/employee/{{ $employee->id }}/edit"><button type="button" class="btn btn-primary">Edit</button></a>
+        <a href="/employee/{{ $employee->id }}/delete"><button type="button" class="btn btn-danger">Delete</button></a>
+    </div>
 @endsection

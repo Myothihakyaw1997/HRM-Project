@@ -9,7 +9,7 @@
         <div class="card-body">
             <h5 class="card-title">{{ $employee->name }}</h5>
             <p class="card-text">{{ $employee->address }}</p>
-            <a href="/employee/{{{$employee->id}}}" class="btn btn-danger">Detail</a>
+            <a href="/employee/{{{$employee->id}}}/show" class="btn btn-danger">Detail</a>
         </div>
     </div>
 @endforeach

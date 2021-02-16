@@ -37,8 +37,9 @@
         <section class="w-100">
             <nav class="bg-dark w-100 nav-bar float-end">
                 <div class="mb01 mt-3 me-5">
-                    <form action="" method="POST" class="d-flex justify-content-end">
-                        <input type="text" class="form-control search-box" name="search" placeholder="Search">
+                    <form action="/search" method="POST" class="d-flex justify-content-end">
+                        @csrf
+                        <input type="text" class="form-control search-box" name="emp-name" placeholder="Search">
                         <input type="submit" class="form-control search-submit" value="search">
                     </form>
                 </div>
