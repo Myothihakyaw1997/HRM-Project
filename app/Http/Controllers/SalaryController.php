@@ -10,6 +10,12 @@ class SalaryController extends Controller
 {
     //
 
+    public function index(){
+        $salaries = Salary::all();
+        return view('salaries',['salaries' => $salaries]);
+
+    }
+
     public function create() {
         $employee = Employee::latest('id')->first();
         return view('salary.create',['employee' => $employee]);

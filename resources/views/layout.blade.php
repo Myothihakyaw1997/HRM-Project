@@ -44,6 +44,7 @@
                 </div>
             </nav>            
             @yield('employee')
+            @yield('salaries')
             <div class="home-wrapper">
                 @yield('home')
             </div>
