@@ -15,6 +15,9 @@ use Whoops\Run;
 */
 
 Route::get('/','App\Http\Controllers\PageController@show');
+Route::get('/login',function(){
+    return view('auth.login');
+});
 
 Route::get('/home','App\Http\Controllers\PageController@show');
 Route::get('/employees','App\Http\Controllers\EmployeeController@index');

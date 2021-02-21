@@ -1,0 +1,45 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html , body {
+    width: 100%;
+    height: 100%;
+}
+
+.login-main {
+    width: inherit;
+    height: inherit;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.login-card {
+    width: 800px;
+    height: 400px;
+}
+
+.login-caption {
+    font-size: 2rem;
+    margin-bottom: 30px;
+}
+
+.card-left {
+    background-color: #052334;
+}
+
+.login-form {
+    width: 300px;
+}
+
+
+.register-btn {
+    position: relative;
+    bottom: 86px;
+    left: 200px
+}

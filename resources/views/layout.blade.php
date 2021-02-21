@@ -39,8 +39,15 @@
                 <div class="mb01 mt-3 me-5">
                     <form action="/search" method="POST" class="d-flex justify-content-end">
                         @csrf
-                        <input type="text" class="form-control search-box" name="emp-name" placeholder="Search">
-                        <input type="submit" class="form-control search-submit" value="search">
+                        <div class="d-flex flex-column">
+                            <input type="text" class="form-control search-box @error('emp-name') border-red @enderror" name="emp-name" placeholder="Employee Name">
+                            @error('emp-name')
+                                <p class="text-danger">Employee name require</p>                            
+                            @enderror
+                        </div>
+                        <div>
+                            <input type="submit" class="form-control search-submit flex-shrink-0" value="search">
+                        </div>
                     </form>
                 </div>
             </nav>            
@@ -63,6 +70,9 @@
 
             <div class="mt-2 employee-show-wrapper">
                 @yield('show-employee')
+            </div>
+            <div class="error-emp-wrapper">
+                @yield('emp-not-found')
             </div>
         </section>
     </div>

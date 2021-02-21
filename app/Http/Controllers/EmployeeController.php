@@ -19,6 +19,11 @@ class EmployeeController extends Controller
     }
 
     public function search() {
+        request()->validate(
+            [
+                'emp-name' => 'required'
+            ]
+            );
         $name = strtolower(str_replace(' ','',request('emp-name')));
 
         $employee = Employee::whereRaw("LOWER(Replace(`name` , ' ', ''))= ?", [$name] )->first();
@@ -27,7 +32,8 @@ class EmployeeController extends Controller
             return view('employee.show',['employee' =>$employee]);
         }
         else {
-            abort(404, "Request Employee Not Found !!!");
+            // abort(404, "Request Employee Not Found !!!");
+            return view('error.emp-not-found',['name' => $name]);
         }
     }
     public function create(){
